@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  flex-flow: row wrap;
+  margin: 5rem auto;
+}
+.container > .box {
+  width: 80vmin;
+  height: 80vmin;
+  position: relative;
+  background-color: darkcyan;
+  overflow: hidden;
+}
+.container > .box > .heading {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.container > .box > .content {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.container > .box > .horizontal-content {
+  transform: translate(100%);
+}
+.container > .box > .vertical-content {
+  transform: translateY(100%);
+}
+.container > .box:nth-child(2) {
+  margin-left: 50px;
+}
+.container > .horizontal:hover .horizontal-content {
+  transform: translate(0);
+  overflow: visible;
+}
+.container > .horizontal:hover .horizontal-head {
+  transform: translate(-100%);
+  overflow: visible;
+}
+.container > .vertical:hover .vertical-content {
+  transform: translateY(0);
+  overflow: hidden;
+}
+.container > .vertical:hover .vertical-head {
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
